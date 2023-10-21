@@ -14,7 +14,6 @@
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <a href="https://www.flaticon.com/free-stickers/people" title="people stickers">People stickers created by Stickers - Flaticon</a>
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -25,17 +24,19 @@
     <!-- Header CSS -->
     <link rel="stylesheet" href="/styles/header.css" type="text/css">
 
-    <!-- New-Tweet -->
+    <!-- New-Tweet CSS -->
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css">
     
-    <!-- Tweet-Display -->
+    <!-- Tweet-Display CSS -->
     <link rel="stylesheet" href="/styles/tweet-display.css" type="text/css">
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- Client JS -->
+    <script defer type="text/javascript" src="/scripts/client.js"></script>
   </head>
  
    <!-- Tweet-Text Counter JS -->
@@ -70,28 +71,15 @@
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <form id="tweet-form" method="post" action="/tweets/">
-          <textarea placeholder="What are you humming about?" name="text" id="tweet-text"></textarea>
+        <form id="tweet-form">
+          <label for="tweet-form">What are you humming about?</label>
+          <textarea name="text" id="tweet-text"></textarea>
           <div id="below-tweet-input">
             <button id="tweet-button" type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
-        <div class="tweet-container">
-          <header class="tweet-header"><img src="https://i.imgur.com/nlhLi3I.png">
-            <div class="user-info">
-              <div class="username">Evan Hands</div>
-              <div class="user-tag">@MrEats</div></header>
-              <article class="tweet">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              </article>
-              <footer>
-                <p class="date template">10 days ago</p>
-                <i class="fa-solid fa-flag"></i>
-                <i class="fa-solid fa-retweet"></i>
-                <i class="fa-solid fa-heart"></i>
-              </footer>
-            </div>
+        <div class="tweets-container">
           </div>
       </section>
     </main>

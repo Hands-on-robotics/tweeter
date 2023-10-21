@@ -27,6 +27,10 @@
   width: 80%;
 }
 
+#tweet-form label {
+  font-family: 'Bungee', sans-serif;
+}
+
 #below-tweet-input {
   display: flex;
   justify-content: space-between;
