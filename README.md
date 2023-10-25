@@ -5,11 +5,13 @@ Since no one like really long posts that go on forever, there is a character cou
 If anyone goes over the character limit or forgets to type a message first, there is a fun and engaging error message for each scenario.
 
 Tweeter is optimized for mobile and desktop use!
+
 !["Screenshot of the mobile version"](https://github.com/Hands-on-robotics/tweeter/blob/master/docs/mobile-view.png)
 
 !["Screenshot of the desktop version"](https://github.com/Hands-on-robotics/tweeter/blob/master/docs/desktop-view.png)
 
 Error messages oriented towards the UX show the correct use of the app!
+
 !["Screenshot of the no tweet error message"](https://github.com/Hands-on-robotics/tweeter/blob/master/docs/no-tweet.png)
 
 !["Screenshot of the tweet message being too long"](https://github.com/Hands-on-robotics/tweeter/blob/master/docs/message-too-long.png)
