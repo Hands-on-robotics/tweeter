@@ -7,9 +7,9 @@ $(document).ready(function() {
     const characterCounter = maxCharacters - inputLength;
 
     if (characterCounter < 0) {
-      $counter.css('color', 'red');
+      $counter.addClass('.error');
     } else if (characterCounter >= 0) {
-      $counter.css('color', '#545149');
+      $counter.removeClass('.error');
     }
     $counter.text(characterCounter);
   });

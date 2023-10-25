@@ -1,52 +1,51 @@
 
-$(document).ready(function() {
-  
-  // appends all tweets to be rendered
-  const createTweetElement = function(tweetData) {
-    const escape = function (str) {
-      let div = document.createElement("div");
-      div.appendChild(document.createTextNode(str));
-      return div.innerHTML;
-    };
-    
-    const $tweet = `
-    <article class="tweet">
-    <header class="tweet-header">
-    <img src="${escape(tweetData.user.avatars)}">
-    <div class="user-info">
-    <div class="username">${escape(tweetData.user.name)}</div>
-    <div class="user-tag">${escape(tweetData.user.handle)}</div>
-    </div>
-    </header>
-    <p class="tweet-text">${escape(tweetData.content.text)}</p>
-    <footer>
-    <span class="date template">${timeago.format(tweetData.created_at)}</span>
-    <i class="fa-solid fa-flag"></i>
-    <i class="fa-solid fa-retweet"></i>
-    <i class="fa-solid fa-heart"></i>
-    </footer>
-    </article>`;
-    
-    return $tweet;
+const createTweetElement = function(tweetData) {
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
   };
+  
+  const $tweet = `
+  <article class="tweet">
+  <header class="tweet-header">
+  <img src="${escape(tweetData.user.avatars)}">
+  <div class="user-info">
+  <div class="username">${escape(tweetData.user.name)}</div>
+  <div class="user-tag">${escape(tweetData.user.handle)}</div>
+  </div>
+  </header>
+  <p class="tweet-text">${escape(tweetData.content.text)}</p>
+  <footer>
+  <span class="date template">${timeago.format(tweetData.created_at)}</span>
+  <i class="fa-solid fa-flag"></i>
+  <i class="fa-solid fa-retweet"></i>
+  <i class="fa-solid fa-heart"></i>
+  </footer>
+  </article>`;
+  
+  return $tweet;
+};
 
-  const renderTweets = function(tweets) {
-    $('.tweets-container').empty();
-    tweets.forEach((tweet) => {
-      const $tweet = createTweetElement(tweet);
-      $('.tweets-container').prepend($tweet);
-    });
-  };
-  
-  const loadTweets = function() {
-    $.ajax("/tweets", { method: "GET" })
-      .then((response) => {
-        renderTweets(response);
-      })
-      .catch((error) => console.log(error));
-  };
-  
-  loadTweets(); // show tweets when user lands on page
+const renderTweets = function(tweets) {
+  $('.tweets-container').empty();
+  tweets.forEach((tweet) => {
+    const $tweet = createTweetElement(tweet);
+    $('.tweets-container').prepend($tweet);
+  });
+};
+
+const loadTweets = function() {
+  $.ajax("/tweets", { method: "GET" })
+    .then((response) => {
+      renderTweets(response);
+    })
+    .catch((error) => console.log(error));
+};
+
+loadTweets(); // show tweets when user lands on page
+
+$(document).ready(function() {
   
   // Post Tweet Route
   $('#tweet-form').on('submit', (event) => {

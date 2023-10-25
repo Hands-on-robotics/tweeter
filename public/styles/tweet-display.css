@@ -82,4 +82,9 @@ article.tweet .date {
   article.tweet .tweet-header {
   height: 100px;
   }
+
+  .tweets-container {
+    overflow-y: scroll;
+    height: calc(100vh - 90px - 243px);
+  }
 }

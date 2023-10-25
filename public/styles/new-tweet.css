@@ -6,6 +6,10 @@
   align-items: center;
 }
 
+.new-tweet .counter.error {
+  color: red;
+}
+
 #tweet-text {
   border: none;
   border-bottom: 3px solid #545149;
@@ -83,7 +87,9 @@
 
 @media screen and (min-width: 1024px) {
   .new-tweet {
+  top: 0;
+  position: sticky;
   flex-grow: 1;
-  padding-top: 20px;
+  padding-top: 6px;
   }
 }

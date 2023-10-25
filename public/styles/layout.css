@@ -35,7 +35,7 @@ main {
   }
 
   .main-container {
-    margin-top: 60px;
+    margin-top: 89px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -45,10 +45,9 @@ main {
     overflow: auto;
   }
   
-  .header-new-tweet-wrap {
+  .tweets-wrap {
     position: sticky;
     height: calc(100vh - 60px);
-    top: 0;
     width: 650px;
     margin-right: 1rem;
   }

@@ -38,9 +38,11 @@ header {
 /* header for desktop */
 
 @media screen and (min-width: 1024px) {
-  header {
+  .main-container > header {
+  top: 0;
+  position: sticky;
   flex: 0 0 33%;
-  height: auto;
+  height: 500px;
   padding-bottom: 64px;
   overflow: auto;
   }

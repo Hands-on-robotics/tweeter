@@ -55,18 +55,18 @@
     </nav>
     <div class="main-container"> 
       <!-- header stays on top of compose new-tweet (both move dynamically to the right) -->
-      <div class="header-new-tweet-wrap">
-        <header>
-          <div class="profile">
-            <div class="pic">
-              <img src="/images/profile-hex.png"> 
-            </div>
-            <br>
-            <div class="name">
-              <h2>Evan Hands</h2>
-            </div>
+      <header>
+        <div class="profile">
+          <div class="pic">
+            <img src="/images/profile-hex.png"> 
           </div>
-        </header>
+          <br>
+          <div class="name">
+            <h2>Evan Hands</h2>
+          </div>
+        </div>
+      </header>
+      <div class="tweets-wrap">
         <section class="new-tweet">
           <div class="error"><p></p></div>
           <h2>Compose Tweet</h2>
@@ -78,9 +78,9 @@
             </div>
           </form>
         </section>
+        <!-- tweets-container moves dynamically (to the right) -->
+        <div class="tweets-container"></div>
       </div> 
-      <!-- tweets-container moves dynamically (to the right) -->
-      <div class="tweets-container"></div>
       </div>
     </body>
     </html>
