@@ -19,7 +19,7 @@ Error messages oriented towards the UX show the correct use of the app!
 
 ## Getting Started
 
-If running on your own computer the server port is set to 8080 on your localhost.
+If running on your own computer, the server port is set to 8080 on your localhost.
 The Tweeter web app comes with a few dependencies listed below.
 
 ## Dependencies
