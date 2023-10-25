@@ -47,7 +47,7 @@ article.tweet .tweet-header img {
 article.tweet p {
   border-bottom: 3px solid #545149;
   width: 100%;
-  word-break: break-all;
+  word-break: break-word;
 }
 
 article.tweet footer {

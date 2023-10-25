@@ -68,7 +68,7 @@ $(document).ready(function() {
         });
 
     } else if (tweetText.length > 140) {
-      $('.error p').text('This tweet is too long to post.');
+      $('.error p').text(`Your tweet's so packed, it's spilling its luggage! Time to repack?`);
       $('.error').slideDown(450);
 
       setTimeout(() => {
@@ -76,7 +76,7 @@ $(document).ready(function() {
       }, 10000);
 
     } else if (tweetText.length < 1) {
-      $('.error p').text('Would you like to type something first?');
+      $('.error p').text(`Going for the invisible ink, huh? Let's see some of those characters!`);
       $('.error').slideDown(450);
 
       setTimeout(() => {
