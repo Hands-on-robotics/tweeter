@@ -1,10 +1,8 @@
 $(document).ready(function() {
-  const $textarea = $('.new-tweet textarea');
-
-  $textarea.on('input', function() {
+  $('.new-tweet textarea').on('input', function() {
+    const maxCharacters = 140;
     const $counter = $('.counter');
     const inputLength = $(this).val().length;
-    const maxCharacters = 140;
     const characterCounter = maxCharacters - inputLength;
 
     if (characterCounter < 0) {

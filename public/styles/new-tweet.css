@@ -70,10 +70,19 @@
 }
 
 .error p strong {
-  font-weight: bold; /* Make the text inside <strong> elements bold */
+  font-weight: bold;
 }
 
 .error p a {
-  color: #fff; /* Style links inside the error message */
-  text-decoration: underline; /* Underline links */
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* new-tweet for desktop */
+
+@media screen and (min-width: 1024px) {
+  .new-tweet {
+  flex-grow: 1;
+  padding-top: 20px;
+  }
 }

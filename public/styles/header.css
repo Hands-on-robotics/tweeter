@@ -33,3 +33,14 @@ header {
 .pic img {
   height: 180px;
 }
+
+/* header for desktop */
+
+@media screen and (min-width: 1024px) {
+  header {
+  flex: 0 0 33%;
+  height: auto;
+  background-color: aqua;
+  padding-bottom: 64px;
+  }
+}

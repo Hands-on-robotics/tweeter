@@ -6,6 +6,7 @@
 
 // Functions //
 $(document).ready(function() {
+
   const createTweetElement = function(tweetData) {
     const escape = function (str) {
       let div = document.createElement("div");
@@ -60,24 +61,30 @@ $(document).ready(function() {
     
     const tweetText = $('#tweet-text').val();
     
-    if (tweetText.length > 0 && tweetText.length < 140) {
-      // CODE REVIEW: The form does not clear when successfully submitted
+    if (tweetText.trim().length > 0 && tweetText.trim().length < 140) {
       $.post({
         method: "POST",
         url: "/tweets",
         data: $('#tweet-form').serialize(),
       })
-      .then((res) => {
-        loadTweets();
-        $('#tweet-form')[0].reset();
-        $('.error').slideUp();
+        .then((res) => {
+          loadTweets();
+          $('#tweet-form')[0].reset();
+          $('.counter').text('140');
+          $('.error').slideUp();
         });
     } else if (tweetText.length > 140) {
       $('.error p').text('This tweet is too long to post.');
       $('.error').slideDown(450);
-    } else if (tweetText.length < 1) {
+      setTimeout(() => {
+        $('.error').slideUp();
+      }, 10000);
+    } else if (tweetText.trim().length < 1) {
       $('.error p').text('Would you like to type something first?');
       $('.error').slideDown(450);
+      setTimeout(() => {
+        $('.error').slideUp();
+      }, 10000);
     }
   });
   

@@ -11,7 +11,10 @@ article.tweet {
   padding: 20px;
 }
 
-article .tweet-header {
+article.tweet:hover {
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+}
+article.tweet .tweet-header {
   display: flex;
   height: 49px;
   margin: 20px;
@@ -22,29 +25,29 @@ article .tweet-header {
   border: none;
 }
 
-article .user-info {
+article.tweet .user-info {
   display: flex;
   justify-content: space-between;
   margin: 0 20px;
   width: 100%;
 }
 
-article .username {
+article.tweet .username {
   font-size: larger;
   font-weight: 500;
 }
 
-article .tweet-header img {
+article.tweet .tweet-header img {
   width: 96px;
   margin: 0px;
 }
 
-article p {
+article.tweet p {
   border-bottom: 3px solid #545149;
   width: 100%;
 }
 
-article footer {
+article.tweet footer {
   border: none;
   display: flex;
   justify-content: right;
@@ -52,15 +55,27 @@ article footer {
   width: 100%;
 }
 
-article i {
+article.tweet i {
   margin-right: 20px;
   font-size: 15px;
 }
 
-article .date {
+article.tweet i:hover {
+  color: red;
+}
+
+article.tweet .date {
   display: flex;
   justify-content: left;
   font-size: medium;
   width: 100%;
   margin: 0;
+}
+
+/* tweet-display for desktop */
+
+@media screen and (min-width: 1024px) {
+  .tweets-container {
+  flex: 0 0 66%;
+  }
 }
