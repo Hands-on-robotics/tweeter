@@ -1,18 +1,10 @@
-/*
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
- * https://css-tricks.com/international-box-sizing-awareness-day/
- * Do not modify these two selectors, please
- */
+
  html {
   box-sizing: border-box;
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
-
-/*
- * Global layout stuff
- */
 
 body {
   display: flex;
@@ -33,11 +25,8 @@ main {
   width: 90%;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
-
  /* layout for desktop */
+ 
 @media screen and (min-width: 1024px) {
   * {
     box-sizing: border-box;
@@ -60,6 +49,7 @@ main {
     position: sticky;
     height: calc(100vh - 60px);
     top: 0;
-    overflow: auto;
+    width: 500px;
+    margin-right: 1rem;
   }
 }

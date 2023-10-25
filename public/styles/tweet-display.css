@@ -1,5 +1,6 @@
 .tweets-container {
   margin: 1em 0;
+  padding: 10px;
 }
 
 
@@ -9,6 +10,7 @@ article.tweet {
   width: 100%;
   margin: 1em 0;
   padding: 20px;
+  word-wrap: break-word;
 }
 
 article.tweet:hover {
@@ -45,6 +47,7 @@ article.tweet .tweet-header img {
 article.tweet p {
   border-bottom: 3px solid #545149;
   width: 100%;
+  word-break: break-all;
 }
 
 article.tweet footer {
@@ -75,7 +78,8 @@ article.tweet .date {
 /* tweet-display for desktop */
 
 @media screen and (min-width: 1024px) {
-  .tweets-container {
-  flex: 0 0 66%;
+  
+  article.tweet .tweet-header {
+  height: 100px;
   }
 }

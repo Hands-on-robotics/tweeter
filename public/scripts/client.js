@@ -1,12 +1,7 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
 
-// Functions //
 $(document).ready(function() {
-
+  
+  // appends all tweets to be rendered
   const createTweetElement = function(tweetData) {
     const escape = function (str) {
       let div = document.createElement("div");
@@ -34,9 +29,9 @@ $(document).ready(function() {
     
     return $tweet;
   };
-  
-  // CODE REVIEW: best practices for preventing code injection
+
   const renderTweets = function(tweets) {
+    $('.tweets-container').empty();
     tweets.forEach((tweet) => {
       const $tweet = createTweetElement(tweet);
       $('.tweets-container').prepend($tweet);
@@ -47,41 +42,43 @@ $(document).ready(function() {
     $.ajax("/tweets", { method: "GET" })
       .then((response) => {
         renderTweets(response);
-      });
+      })
+      .catch((error) => console.log(error));
   };
   
-  loadTweets();
+  loadTweets(); // show tweets when user lands on page
   
-  // Routes //
-  
-  // post tweet
+  // Post Tweet Route
   $('#tweet-form').on('submit', (event) => {
     event.preventDefault();
-    $('.error');
     
-    const tweetText = $('#tweet-text').val();
+    const tweetText = $('#tweet-text').val().trim();
     
-    if (tweetText.trim().length > 0 && tweetText.trim().length < 140) {
+    if (tweetText.length > 0 && tweetText.length <= 140) {
       $.post({
         method: "POST",
         url: "/tweets",
         data: $('#tweet-form').serialize(),
       })
-        .then((res) => {
+        .then(() => {
           loadTweets();
           $('#tweet-form')[0].reset();
           $('.counter').text('140');
           $('.error').slideUp();
         });
+
     } else if (tweetText.length > 140) {
       $('.error p').text('This tweet is too long to post.');
       $('.error').slideDown(450);
+
       setTimeout(() => {
         $('.error').slideUp();
       }, 10000);
-    } else if (tweetText.trim().length < 1) {
+
+    } else if (tweetText.length < 1) {
       $('.error p').text('Would you like to type something first?');
       $('.error').slideDown(450);
+
       setTimeout(() => {
         $('.error').slideUp();
       }, 10000);

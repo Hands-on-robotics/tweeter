@@ -1,3 +1,4 @@
+
 header {
   padding-top: 120px;
   height: 400px;
@@ -40,7 +41,8 @@ header {
   header {
   flex: 0 0 33%;
   height: auto;
-  background-color: aqua;
+  width: 500px;
   padding-bottom: 64px;
+  overflow: auto;
   }
 }

@@ -1,3 +1,4 @@
+
 .new-tweet {
   display: flex;
   flex-direction: column;
@@ -53,20 +54,20 @@
 
 .error {
   display: none;
-  border: 2px solid #ff3333; /* Red border for the parent container */
-  border-radius: 5px; /* Rounded corners for the parent container */
-  padding: 20px; /* Padding around the error message content */
+  border: 2px solid #ff3333;
+  border-radius: 5px;
+  padding: 20px;
   width: 80%;
 }
 
 .error p {
-  background-color: #ff7f7f; /* Reddish background color for the error message */
-  color: #fff; /* White text color */
-  padding: 10px; /* Padding around the text */
-  border: 1px solid #ff3333; /* Red border for the error message */
-  border-radius: 5px; /* Rounded corners for the error message */
-  margin: 10px 0; /* Spacing above and below the message */
-  text-align: center; /* Center align the text */
+  background-color: #ff7f7f;
+  color: #fff;
+  padding: 10px;
+  border: 1px solid #ff3333;
+  border-radius: 5px;
+  margin: 10px 0;
+  text-align: center;
 }
 
 .error p strong {

@@ -49,12 +49,12 @@
         <span class="nav-logo">tweeter</span>
       </div>
       <div class="nav-right">
-        <span class="new-tweet"><span class="bold">Write </span>a new tweet</span>
+        <span class="new-tweet"><span class="bold">Write</span>a new tweet</span>
         <i id="nav-down-arrow" class="fa-solid fa-angles-down fa-fade"></i>
       </div>
     </nav>
-    <!-- Header (scrolls up) -->
     <div class="main-container"> 
+      <!-- header stays on top of compose new-tweet (both move dynamically to the right) -->
       <div class="header-new-tweet-wrap">
         <header>
           <div class="profile">
@@ -67,14 +67,11 @@
             </div>
           </div>
         </header>
-        <!-- Page-specific (main) content here -->
-        <!-- <main class="container"></main> -->
         <section class="new-tweet">
           <div class="error"><p></p></div>
           <h2>Compose Tweet</h2>
           <form id="tweet-form">
-            <label for="tweet-form">What are you humming about?</label>
-            <textarea name="text" id="tweet-text"></textarea>
+            <textarea name="text" id="tweet-text" placeholder="What are you humming about?" rows="5"></textarea>
             <div id="below-tweet-input">
               <button id="tweet-button" type="submit">Tweet</button>
               <output name="counter" class="counter" for="tweet-text">140</output>
@@ -82,6 +79,7 @@
           </form>
         </section>
       </div> 
+      <!-- tweets-container moves dynamically (to the right) -->
       <div class="tweets-container"></div>
       </div>
     </body>
