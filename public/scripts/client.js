@@ -1,6 +1,6 @@
 
 const createTweetElement = function(tweetData) {
-  const escape = function (str) {
+  const escapeText = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
@@ -9,13 +9,13 @@ const createTweetElement = function(tweetData) {
   const $tweet = `
   <article class="tweet">
   <header class="tweet-header">
-  <img src="${escape(tweetData.user.avatars)}">
+  <img src="${tweetData.user.avatars}">
   <div class="user-info">
-  <div class="username">${escape(tweetData.user.name)}</div>
-  <div class="user-tag">${escape(tweetData.user.handle)}</div>
+  <div class="username">${tweetData.user.name}</div>
+  <div class="user-tag">${tweetData.user.handle}</div>
   </div>
   </header>
-  <p class="tweet-text">${escape(tweetData.content.text)}</p>
+  <p class="tweet-text">${escapeText(tweetData.content.text)}</p>
   <footer>
   <span class="date template">${timeago.format(tweetData.created_at)}</span>
   <i class="fa-solid fa-flag"></i>
