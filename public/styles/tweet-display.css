@@ -80,11 +80,11 @@ article.tweet .date {
 @media screen and (min-width: 1024px) {
   
   article.tweet .tweet-header {
-  height: 100px;
+    height: 100px;
   }
-
+  
   .tweets-container {
     overflow-y: scroll;
-    height: calc(100vh - 90px - 243px);
+    height: calc(100vh - 90px - 281px);
   }
 }

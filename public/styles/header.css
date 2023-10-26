@@ -41,9 +41,13 @@ header {
   .main-container > header {
   top: 0;
   position: sticky;
-  flex: 0 0 33%;
+  flex: 0 33%;
   height: 500px;
   padding-bottom: 64px;
-  overflow: auto;
+  padding-right: 64px;
+  padding-left: 64px;
+  overflow: inherit;
+  margin-right: 25px;
+  margin-top: 60px;
   }
 }

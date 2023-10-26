@@ -34,8 +34,12 @@ main {
     padding: 0;
   }
 
+  body {
+    overflow: hidden;
+  }
+
   .main-container {
-    margin-top: 89px;
+    margin-top: 0px;
     display: flex;
     flex-direction: row;
     justify-content: center;
