@@ -6,7 +6,7 @@
   align-items: center;
 }
 
-.new-tweet .counter.error {
+.new-tweet .counter-error {
   color: red;
 }
 
