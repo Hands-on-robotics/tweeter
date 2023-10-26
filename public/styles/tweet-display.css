@@ -85,6 +85,11 @@ article.tweet .date {
   
   .tweets-container {
     overflow-y: scroll;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none;
     height: calc(100vh - 90px - 281px);
+  }
+  .element-with-scroll::-webkit-scrollbar {
+    display: none;
   }
 }

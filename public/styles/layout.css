@@ -1,5 +1,5 @@
 
- html {
+html {
   box-sizing: border-box;
 }
 *, *:before, *:after {
@@ -25,8 +25,12 @@ main {
   width: 90%;
 }
 
- /* layout for desktop */
- 
+.tweets-wrap {
+  padding-top: 30px;
+}
+
+  /* layout for desktop */
+
 @media screen and (min-width: 1024px) {
   * {
     box-sizing: border-box;
@@ -35,7 +39,7 @@ main {
   }
 
   body {
-    overflow: hidden;
+  height: calc(100vh);
   }
 
   .main-container {
@@ -46,7 +50,6 @@ main {
     flex-wrap: nowrap;
     height: calc(100vh - 60px);
     width: 100%;
-    overflow: auto;
   }
   
   .tweets-wrap {
